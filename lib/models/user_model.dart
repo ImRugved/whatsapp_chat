@@ -1,3 +1,5 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
+
 class UserModel {
   final String uid;
   final String name;
@@ -6,7 +8,7 @@ class UserModel {
   final String profileImageUrl;
   final String status;
   final bool isOnline;
-  final String lastSeen;
+  final dynamic lastSeen;
 
   UserModel({
     required this.uid,
@@ -56,7 +58,7 @@ class UserModel {
     String? profileImageUrl,
     String? status,
     bool? isOnline,
-    String? lastSeen,
+    dynamic lastSeen,
   }) {
     return UserModel(
       uid: uid ?? this.uid,
